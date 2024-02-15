@@ -197,3 +197,163 @@
     width: 30%
 }
 
+
+/* footer */
+.footer-md {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* big victor */
+.orangeclothe{
+    border: 1px solid red;
+    background-image: url("../images/banner/b17.jpg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 550px;
+    background-size: cover;
+    height: 350px;
+}
+
+.ashclothe{
+    background-image: url("../images/banner/b10.jpg");
+    background-repeat: no-repeat;
+    width: 550px;
+    background-size: cover;
+    background-position-x: center;
+    height: 350px;
+}
+
+/* 
+.banner > div > .cover > h6 {
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.banner > div > .cover > h3{
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 18px;
+}
+
+.cover{
+    margin-top: 50px;
+}
+.banner > div > .cover > p{
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+} */
+
+.learnmore{
+    background-color: transparent;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.learnmore:hover{
+    background-color: rgb(37, 66, 37);
+    border-color: transparent;
+}
+
+.threepicssection{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bluepics{
+    background-image: url("../images/banner/b7.jpg");
+    width: 370.5px;
+    /* height: 500px; */
+    background-size: cover;
+    padding-left: 20px;
+    margin: 0px 0px 20px;
+    background-repeat: no-repeat;
+}
+
+
+.graypics{
+    background-image: url("../images/banner/b4.jpg");
+    width: 405px;
+    /* height: 200px; */
+    padding-left: 20px;
+    margin: 0px 0px 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.lastcard{
+    background-image: url("../images/banner/b18.jpg");
+    width: 349.44px;
+    /* height: 200px; */
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    margin: 0px 0px 20px;
+    background-size: cover;
+}
+
+
+/* Nkiru's hero styling */
+/* another one */
+
+.read-sec {
+    background-image: url("../images/banner/b19.jpg");
+}
+
+
+.hero-container {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    height: 250px;
+}
+.all{
+    color: white;
+    font-size: 20px;
+}
+
+.more{
+    color: white;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+.about {
+    background-image: url("../images/banner/about/banner.png");
+}
+
+/* contact page styling-Boms */
+#contact-form form span {
+    font-size: 10px;
+    color: #6b6b6b;
+}
+#contact-form form h2 {
+    font-size: 26px;
+    line-height: 25px;
+    padding: 20px 0;
+}
+#contact-form form input {
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 1rem;
+    outline: none;
+    border: 1px solid #6b6b6bc8;
+}
+/*#contact-form form input,*/
+#contact-form-submit {
+    background-color: #088178;
+    color: #fff;
+    margin-top: 1rem;
+    border: 1px solid #088178;
+}
+
+
+
+
