@@ -79,10 +79,11 @@ function fetchAPI() {
 // grab the collection div
 
 
+
 // fetching
-async function fetchData() {
+async function fetchData(apiURL) {
   try {
-    const response = await fetch("./asset/data/collection.json");
+    const response = await fetch(apiURL);
     const data = await response.json();
     console.log(data);
     
@@ -118,4 +119,89 @@ async function fetchData() {
   }
 }
 
-fetchData()
+fetchData("../asset/data/collection.json");
+
+
+
+
+// fetching
+async function fetchShopData() {
+  try {
+    const response = await fetch("../asset/data/shop.json");
+    const data3 = await response.json();
+    console.log(data3);
+    
+    if(!data3) {
+      return;
+    }
+    const collectionElem = document.getElementById("shop");
+    
+    data3.map((item) => {
+      let cardDiv = document.createElement("div");
+      cardDiv.className = "w-[300px] border p-1 rounded-xl cursor-pointer hover:shadow-2xl mt-4";
+      cardDiv.innerHTML = 
+      `
+      <img src=${item.imgSrc} alt="" class="rounded-xl">
+      <p class="text-xs text-gray-500">${item.category}</p>
+      <h4 class="font-bold">${item.productName}</h4>
+      <i class="fa fa-star text-orange-400" aria-hidden="true"></i>
+      <i class="fa fa-star text-orange-400" aria-hidden="true"></i>
+      <i class="fa fa-star text-orange-400" aria-hidden="true"></i>
+      <i class="fa fa-star text-orange-400" aria-hidden="true"></i>
+      <i class="fa fa-star text-orange-400" aria-hidden="true"></i>
+      <div class="flex justify-between items-center">
+          <p class="font-bold text-green-800">$${item.price}</p>
+          <a href="#" class="border p-2 bg-green-200 rounded-full">
+              <i class="fa fa-shopping-cart text-green-800" aria-hidden="true"></i>
+          </a>
+      </div>
+      `
+      collectionElem.appendChild(cardDiv);
+    })
+  } catch (error) {
+    console.error("Error loading JSON file", error)
+  }
+}
+fetchShopData();
+
+// fetching blog data
+async function fetchBlogData() {
+  try {
+    const response = await fetch("../asset/data/blog.json");
+    const data2 = await response.json();
+    console.log(data2);
+    
+    if(!data2) {
+      return;
+    }
+    const blogElem = document.getElementById("blog-container");
+    
+    data2.map((item) => {
+      let cardDiv = document.createElement("div");
+
+      cardDiv.innerHTML = 
+      `
+      <p  class=" text-5xl text-gray-300 ml-[155px] mb-[-5px] font-bold">${item.date}</p>
+      <div class="img-div flex items-center mx-40 gap-10">
+          <div class="w-[600px] h-[350px] overflow-hidden blog-card">
+            <img class="w-full mt-[-140px]" src=${item.imgPath} alt="" >
+           </div>
+          
+           <div class="jersey">
+            <h3 class="font-bold text-xl">${item.title}</h3>
+        
+            <p class="text-xs py-4">${item.excerpt}</p>
+        
+            <a href="" class="font-bold text-sm">READ MORE......</a>
+           </div>
+        
+        </div>
+      `
+      blogElem.appendChild(cardDiv);
+    })
+  } catch (error) {
+    console.error("Error loading JSON file", error)
+  }
+}
+
+fetchBlogData();
